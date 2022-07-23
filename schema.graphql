@@ -20,6 +20,20 @@ type Message @entity {
   id: ID!
   blockHeight: BigInt!
   txHash: String!
-  sender: String!
-  contract: String!
+  sender: String
+  contract: String
+}
+
+type Club @entity {
+  id: ID!
+  owner: String!
+  club_name: String!
+  sport: String!
+}
+
+type Stake @entity {
+  id: ID!
+  amount: BigInt!
+  club: Club!
+  staker: String!
 }
