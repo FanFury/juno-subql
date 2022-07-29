@@ -15,16 +15,15 @@ schema:
   file: ./schema.graphql
 
 network:
-  chainId: uni-3
+  chainId: juno-1
   # You must connect to an archive (non-pruned) node
-  endpoint: https://rpc.uni.junonetwork.io
+  endpoint: https://rpc.juno-1.api.onfinality.io
   # Using a dictionary can massively improve indexing speed
-  # dictionary: https://api.subquery.network/sq/subquery/cosmos-juno-dictionary
+  dictionary: https://api.subquery.network/sq/subquery/cosmos-juno-dictionary
 
 dataSources:
   - kind: cosmos/Runtime
-  # 775283
-    startBlock: 896821 # first block on uni-3
+    startBlock: 4136530
     #chainTypes: # This is a beta feature that allows support for any Cosmos chain by importing the correct protobuf messages
     #  cosmos.slashing.v1beta1:
     #    file: "./proto/cosmos/slashing/v1beta1/tx.proto"
@@ -40,7 +39,7 @@ dataSources:
           filter:
             type: "/cosmwasm.wasm.v1.MsgExecuteContract"
             values:
-              contract: juno1sssjygq67w3xzhxvdgp30qdpnpew3cjh42j4rj5z3d46uk77sgaq0lfqpm
+              contract: juno1cltgm8v842gu54srmejewghnd6uqa26lzkpa635wzra9m9xuudkqa2gtcz
             # Filter to only messages with the provide_liquidity function call
             #contractCall: "provide_liquidity" # The name of the contract function that was called
             #values: # A set of key/value pairs that are present in the message data
