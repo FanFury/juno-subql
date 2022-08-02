@@ -23,7 +23,7 @@ network:
 
 dataSources:
   - kind: cosmos/Runtime
-    startBlock: 4136530
+    startBlock: 4136532
     #chainTypes: # This is a beta feature that allows support for any Cosmos chain by importing the correct protobuf messages
     #  cosmos.slashing.v1beta1:
     #    file: "./proto/cosmos/slashing/v1beta1/tx.proto"
